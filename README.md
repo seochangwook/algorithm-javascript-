@@ -4,5 +4,5 @@
 - 참조 도서 : Data Structures & Algorithms with JavaScript
 
 <div>
-<img src="https://raw.githubusercontent.com/seochangwook/algorithm_javascript/master/book_image.png" width="350" height="300">
+<img src="https://raw.githubusercontent.com/seochangwook/algorithm_javascript/master/book_image.png" width="150" height="200">
 </div>
