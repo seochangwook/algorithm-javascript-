@@ -23,3 +23,11 @@ var last_position = array.lastIndexOf(search_subject);
 
 console.log('first position: ' + first_position);
 console.log('last position: ' + last_position);
+////////////////////////////
+//concat(), splice()사용 - concat() 연결 시 배열 뒤로 붙는다. splice()는 기존 배열 요소를 가지고 새 배열을 만든다.//
+var itDiv = ['Mike', 'Clayton', 'Terrill', 'Raymond', 'Cynthia', 'Danny', 'Jennifer'];
+var dmpDept = itDiv.splice(3,3);
+var cisDept = itDiv;
+
+console.log(dmpDept);
+console.log(cisDept);
