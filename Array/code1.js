@@ -21,7 +21,7 @@ console.log('------------------------');
 ///////////////////////////
 var sentence = 'seochangwook is perfect app developer';
 
-//split()을 이용해서 문자열 분리//
+//split()을 이용해서 문자열 분리 - 배열로 반환.//
 var words = sentence.split(' ');
 
 for(var i=0; i<words.length; i++){
