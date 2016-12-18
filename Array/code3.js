@@ -47,7 +47,8 @@ var array_7 = [1,2,3,4,5];
 array_7.reverse();
 console.log(array_7);
 ////////////////////////////
-//sort() 사용 - 정렬(문자열 정렬 시 유용)//
+//sort() 사용 - 정렬(문자열 정렬 시 유용, 숫자일 경우 추가적인 방법이 필요)//
 var array_8 = ['apple', 'car', 'banana'];
 array_8.sort();
 console.log(array_8);
+////////////////////////////
