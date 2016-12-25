@@ -99,7 +99,7 @@ console.log(acronym.join("")); //공백을 이용하여 문자열을 분리. ','
 ///////////////////////////
 /*filter()함수 사용
 -> every()함수와 비슷하지만 every()함수처럼 배열의 모든 요소가 불린 함수를 만족할 때 true를 반환하는 것이 아니라
-불린 함수를 만족하는 요소를 포함하는 새로운 배열을 반환 */
+불린 함수를 만족하는 요소를 포함하는 새로운 배열을 반환. 즉 true인것들만 가지고 새로운 배열을 만든다. */
 function isEven(num){
     return num % 2 == 0;
 }
@@ -114,7 +114,7 @@ for(var i=0; i<20; i++){
     nums[i] = i+1; //1부터 저장//
 }
 
-var evens = nums.filter(isEven);
+var evens = nums.filter(isEven); //isEven조건에 만족하는 새로운 배열을 반환//
 console.log('Event numbers: ');
 console.log(evens);
 
@@ -122,4 +122,34 @@ var odds = nums.filter(isOdd);
 console.log('Odd numbers: ');
 console.log(odds);
 ////////////////////////////
+/*filter()사용*/
+function passing(num){
+    return num >= 60;
+}
 
+var grades = []; //빈 배열//
+
+for(var i=0; i<20; i++){
+    grades[i] = Math.floor(Math.random() * 101); //점수를 렌덤으로 계산하여 배열에 대입//
+}
+
+var passGrades = grades.filter(passing); //조건에 만족하는 새로운 배열을 반환//
+
+console.log('All grades: ');
+console.log(grades);
+console.log('Passing grades: ');
+console.log(passGrades)
+/////////////////////////////
+/*문자열에 filter()적용. 규칙을 생성 가능*/
+function afterc(str){
+    if(str.indexOf('cie') > -1){
+        return true;
+    }
+
+    return false;
+}
+
+var words = ['recieve', 'deceive', 'percieve', 'deceit', 'concieve'];
+var misspelled = words.filter(afterc);
+
+console.log(misspelled)
