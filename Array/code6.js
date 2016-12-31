@@ -92,3 +92,55 @@ var reverse_str_array = str_array.reverse();
 for(var i=0; i<str_array.length; i++){
     console.log('str['+i+']: ' + str_array[i])
 }
+/////////////////////////////
+function Student_class(){
+    //필드정의//
+    this.student_number = [];
+
+    //메소드 정의//
+    this.insert = insert;
+    this.total_grade = total_grade;
+    this.average_grade = average_grade;
+    this.init = init;
+}
+
+function insert(grade){
+    this.student_number.push(grade) //기존 클래스에 있는 것에 접근할려면 this 필요//
+}
+
+function total_grade(){
+    this.total = 0;
+
+    for(var i=0; i<this.student_number.length; i++){
+        this.total += this.student_number[i];
+    }
+
+    console.log('total: ' + this.total);
+}
+
+function average_grade(){
+    this.total = 0;
+
+    for(var i=0; i<this.student_number.length; i++){
+        this.total += this.student_number[i];
+    }
+
+    console.log('average: ' + this.total / this.student_number.length);
+}
+
+function init(){
+    this.student_number = [];
+}
+
+console.log('-----------------------');
+
+var student_class = new Student_class();
+
+student_class.insert(10);
+student_class.insert(20);
+student_class.insert(30);
+
+student_class.total_grade();
+student_class.average_grade();
+
+student_class.init();
