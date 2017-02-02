@@ -74,10 +74,38 @@ function check_bracket(input_expansion){
                 }
                 break;
             case '}' :
-                console.log("닫힌 중괄호");
+                //console.log("닫힌 중괄호");
+
+                if(stack.length() == 0){
+                    check_variable = false;
+                }
+
+                else{
+                    var element = stack.peek(); //확인//
+                    //괄호의 쌍이 맞는지 비교//
+                    if(element == '{'){
+                        stack.pop(); //맞으니 제거//
+                    }
+
+                    console.log("pop element : " + element);
+                }
                 break;
             case ']' :
-                console.log("닫힌 대괄호");
+                //console.log("닫힌 대괄호");
+
+                if(stack.length() == 0){
+                    check_variable = false;
+                }
+
+                else{
+                    var element = stack.peek(); //확인//
+                    //괄호의 쌍이 맞는지 비교//
+                    if(element == '['){
+                        stack.pop(); //맞으니 제거//
+                    }
+
+                    console.log("pop element : " + element);
+                }
                 break;
         }
     }
