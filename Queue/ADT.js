@@ -25,3 +25,39 @@ function front(){
 function back(){
     return this.dataStore[this.dataStore.length-1];
 }
+///////////////////////////
+function toString(){
+    var retStr = "";
+
+    for(var i=0; i<this.dataStore.length; ++i){
+        retStr += this.dataStore[i] + "\n";
+    }
+
+    return retStr;
+}
+////////////////////////////
+function empty(){
+    if(this.dataStore.length == 0){
+        return true;
+    }
+
+    else{
+        return false;
+    }
+}
+/////////////////////////////
+//Test//
+var q = new Queue(); //객체생성//
+
+q.enqueue("Meredith");
+q.enqueue("Cynthia");
+q.enqueue("Jennifer");
+
+console.log(q.toString());
+
+q.dequeue();
+
+console.log(q.toString());
+
+console.log("Front of queue: " + q.front());
+console.log("Back of queue: " + q.back());
